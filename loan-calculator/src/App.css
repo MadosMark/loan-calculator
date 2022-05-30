@@ -5,10 +5,10 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  height: 100vh;
 }
 .wrapper {
-  width: 30%;
-  padding-top: 20px;
+  width: 25%;
   padding-left: 20px;
   padding-right: 20px;
   border-radius: 5px;
@@ -20,23 +20,10 @@ p {
   color: black;
 }
 .slider_wrapper {
-  margin-top: 50px;
+  margin-top: 30px;
 }
 .slider_two {
-  margin-top: 20px;
-}
-.button_wrapper {
-  display: flex;
-  justify-content: flex-end;
-}
-.button {
-  background-color: white !important;
-  margin-top: 20px;
-  font-family: "Barlow Condensed", sans-serif;
-  font-size: 20px;
-}
-.button:hover {
-  box-shadow: 0.2px 0.2px 1px black;
+  margin-top: 10px;
 }
 .calculation {
   padding: 15px;
@@ -59,8 +46,22 @@ p {
   padding: 10px;
   border-radius: 5px;
   border: none;
+  margin-top: 15px;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 1px 1px, rgba(0, 0, 0, 0.23) 0px 2px 2px;
+  transition: all300ms ease;
+}
+
+.button_wrapper:hover {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
 }
 a {
   text-decoration: none;
   color: black;
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 20px;
+}
+.monthly_payment_wrapper {
+  display: flex;
+  justify-content: space-between;
 }

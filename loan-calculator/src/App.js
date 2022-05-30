@@ -52,13 +52,14 @@ function App() {
           />
           <p className="value">{valueTwo} år</p>
         </div>
-
-        <p>Månadskostnad:</p>
-        {valueTwo ? (
-          <p>{monthlyPayment}kr/månad</p>
-        ) : (
-          <p className="calculation">Uträkning kommer visas här</p>
-        )}
+        <div className="monthly_payment_wrapper">
+          <p>Månadskostnad:</p>
+          {valueTwo ? (
+            <p>{monthlyPayment}kr/månad</p>
+          ) : (
+            <p className="calculation">Uträkning kommer visas här</p>
+          )}
+        </div>
       </div>
       <button className="button_wrapper">
         <a href={`loan-application/?amount=${valueOne}&months=${valueTwo}`}>
