@@ -6,7 +6,6 @@
   align-items: center;
   flex-direction: column;
 }
-
 .wrapper {
   width: 30%;
   padding-top: 20px;
@@ -20,15 +19,12 @@ p {
   font-size: 26px;
   color: black;
 }
-
-.slider {
+.slider_wrapper {
   margin-top: 50px;
 }
-
-.slide {
+.slider_two {
   margin-top: 20px;
 }
-
 .button_wrapper {
   display: flex;
   justify-content: flex-end;
@@ -42,13 +38,13 @@ p {
 .button:hover {
   box-shadow: 0.2px 0.2px 1px black;
 }
-
-.calc {
+.calculation {
   padding: 15px;
   font-size: 12px;
   opacity: 0.6;
 }
-.choose {
+.choose_payment,
+.choose_time {
   font-size: 16px;
 }
 .value {
@@ -58,8 +54,7 @@ p {
   background-color: whitesmoke;
   border-radius: 5px;
 }
-
-.button {
+.button_wrapper {
   background-color: lightgreen !important;
   padding: 10px;
   border-radius: 5px;

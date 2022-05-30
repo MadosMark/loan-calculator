@@ -3,64 +3,65 @@ import React from "react";
 import { Slider } from "@mui/material";
 
 function App() {
-  const [value, setValue] = React.useState(20000);
-  const [valuee, setValuee] = React.useState(2);
+  const [valueOne, setValue] = React.useState(20000);
+  const [valueTwo, setValueTwo] = React.useState(2);
 
   const handleChange = (e, newValue) => {
     setValue(newValue);
   };
-  const handleChangee = (e, newValuee) => {
-    setValuee(newValuee);
+  const handleChangeSecond = (e, newValueTwo) => {
+    setValueTwo(newValueTwo);
   };
-  const amount = value;
-  const years = valuee;
+
+  const amount = valueOne;
+  const years = valueTwo;
   const interest = 0.00825;
   const months = years * 12;
-  const x = Math.pow(1 + interest, months);
-  const monthly = (amount * x * interest) / (x - 1);
+  const calculation = Math.pow(1 + interest, months);
+  const monthly = (amount * calculation * interest) / (calculation - 1);
   let monthlyPayment = Math.ceil(monthly);
 
   return (
     <div className="container">
       <div className="wrapper">
         <p>Lånekalkyl</p>
-        <div className="slider">
-          <p className="choose">Välj Lånebelopp</p>
+        <div className="slider_wrapper">
+          <p className="choose_payment">Välj Lånebelopp</p>
           <Slider
             defaultValue={20000}
             aria-label="Default"
             step={10000}
             min={20000}
             max={200000}
-            value={value}
+            value={valueOne}
             onChange={handleChange}
             color="warning"
           />
-          <p className="value">{value} kr</p>
-          <p className="choose">Välj Återbetalningstid</p>
+          <p className="value">{valueOne} kr</p>
+          <p className="choose_time">Välj Återbetalningstid</p>
           <Slider
-            className="slide"
+            className="slider_two"
             defaultValue={2}
             aria-label="Default"
             step={1}
             min={2}
             max={10}
-            value={valuee}
-            onChange={handleChangee}
+            value={valueTwo}
+            onChange={handleChangeSecond}
             color="warning"
           />
-          <p className="value">{valuee} år</p>
+          <p className="value">{valueTwo} år</p>
         </div>
 
         <p>Månadskostnad:</p>
-        {valuee ? (
+        {valueTwo ? (
           <p>{monthlyPayment}kr/månad</p>
         ) : (
-          <p className="calc">Uträkning kommer visas här</p>
+          <p className="calculation">Uträkning kommer visas här</p>
         )}
       </div>
-      <button className="button">
-        <a href={`loan-application/?amount=${value}&months=${valuee}`}>
+      <button className="button_wrapper">
+        <a href={`loan-application/?amount=${valueOne}&months=${valueTwo}`}>
           Till Ansökan
         </a>
       </button>
