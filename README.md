@@ -1,3 +1,3 @@
 # Loan Calculator
 
-Visit: https://loan-calculator-project-kt08glf7w-madosmark.vercel.app/
+Visit: https://loan-calculator-project-2rqd6g250-madosmark.vercel.app/
